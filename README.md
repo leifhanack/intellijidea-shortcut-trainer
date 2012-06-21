@@ -1,0 +1,2 @@
+intellijidea-shortcut-trainer
+=============================
