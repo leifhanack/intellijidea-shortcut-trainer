@@ -1,0 +1,23 @@
+<idea-plugin version="2">
+  <name>Shortcut Trainer</name>
+  <description>Allows you to train your current keymap by presenting the description of a random shortcut (Cmd-Shift-K / Ctrl-Shift-K).
+    If you don't know the shortcut you can ask for the solution (Alt-S) or try the next (Alt-N).</description>
+  <version>1.0</version>
+  <vendor>Leif Hanack</vendor>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <application-components/>
+
+  <project-components/>
+
+  <actions>
+    <action id="de.strug.shortcut_trainer.ShortcutTrainer" class="de.strug.shortcut_trainer.ShortcutTrainer" text="Shortcut Trainer">
+      <add-to-group group-id="HelpMenu" anchor="first"/>
+      <keyboard-shortcut first-keystroke="control shift K" keymap="$default"/>
+    </action>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij"/>
+</idea-plugin>
