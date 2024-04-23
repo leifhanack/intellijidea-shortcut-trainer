@@ -6,17 +6,21 @@ import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.actionSystem.Shortcut;
 import com.intellij.openapi.keymap.Keymap;
 import com.intellij.openapi.keymap.KeymapManager;
-import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.*;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.Random;
 
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-public class RandomShortcutFactoryTest extends TestCase {
+
+
+@RunWith(MockitoJUnitRunner.class)
+public class RandomShortcutFactoryTest {
     @InjectMocks
     private RandomShortcutFactory factory;
 
@@ -34,19 +38,16 @@ public class RandomShortcutFactoryTest extends TestCase {
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
-
         mockedKeymapManager = Mockito.mockStatic(KeymapManager.class);
         mockedKeymapManager.when(KeymapManager::getInstance).thenReturn(keymapManager);
         when(keymapManager.getActiveKeymap()).thenReturn(keymap);
 
         mockedActionManager = Mockito.mockStatic(ActionManager.class);
         mockedActionManager.when(ActionManager::getInstance).thenReturn(actionManager);
-        when(ActionManager.getInstance()).thenReturn(actionManager);
 
         presentation = new Presentation();
         presentation.setText("Valid Action");
-        presentation.setDescription("Valid Description");
+        presentation.setDescription("Valid description");
     }
 
     @After
@@ -57,19 +58,18 @@ public class RandomShortcutFactoryTest extends TestCase {
 
     @Test
     public void testCreateRandomShortcut_EmptyShortcuts() {
-        try (MockedConstruction<Random> mock = mockConstruction(Random.class, (mockRandom, context) -> {
+        try (MockedConstruction<Random> ignored = mockConstruction(Random.class, (mockRandom, context) -> {
             when(mockRandom.nextInt(anyInt())).thenReturn(0, 1);  // Simulate no shortcuts, then valid shortcuts and action
         })) {
             String actionIdWithNoShortcut = "actionWithNoShortcut";
             String validActionId = "validAction";
             when(keymap.getActionIds()).thenReturn(new String[]{actionIdWithNoShortcut, validActionId});
 
-            Shortcut emptyShortcutArray[] = new Shortcut[0];
+            Shortcut[] emptyShortcutArray = new Shortcut[0];
             when(keymap.getShortcuts(actionIdWithNoShortcut)).thenReturn(emptyShortcutArray);
-            AnAction nullAction = null;
-            when(actionManager.getAction(actionIdWithNoShortcut)).thenReturn(nullAction);
+            when(actionManager.getAction(actionIdWithNoShortcut)).thenReturn(null);
 
-            Shortcut validShortcutArray[] = {mock(Shortcut.class)};
+            Shortcut[] validShortcutArray = {mock(Shortcut.class)};
             when(keymap.getShortcuts(validActionId)).thenReturn(validShortcutArray);
             AnAction validAction = mock(AnAction.class);
             when(actionManager.getAction(validActionId)).thenReturn(validAction);
@@ -85,17 +85,16 @@ public class RandomShortcutFactoryTest extends TestCase {
 
     @Test
     public void testCreateRandomShortcut_NullAction() {
-        try (MockedConstruction<Random> mock = mockConstruction(Random.class, (mockRandom, context) -> {
+        try (MockedConstruction<Random> ignored = mockConstruction(Random.class, (mockRandom, context) -> {
             when(mockRandom.nextInt(anyInt())).thenReturn(0, 1);  // Simulate shortcuts but action is null, then valid action
         })) {
             String actionIdWithNullAction = "actionWithNullAction";
             String validActionId = "validAction";
             when(keymap.getActionIds()).thenReturn(new String[]{actionIdWithNullAction, validActionId});
 
-            Shortcut nonEmptyShortcutArray[] = {mock(Shortcut.class)};
+            Shortcut[] nonEmptyShortcutArray = {mock(Shortcut.class)};
             when(keymap.getShortcuts(actionIdWithNullAction)).thenReturn(nonEmptyShortcutArray);
-            AnAction nullAction = null;
-            when(actionManager.getAction(actionIdWithNullAction)).thenReturn(nullAction);
+            when(actionManager.getAction(actionIdWithNullAction)).thenReturn(null);
 
             when(keymap.getShortcuts(validActionId)).thenReturn(nonEmptyShortcutArray);
             AnAction validAction = mock(AnAction.class);
@@ -112,13 +111,13 @@ public class RandomShortcutFactoryTest extends TestCase {
 
     @Test
     public void testCreateRandomShortcut_ValidShortcutsAndAction() {
-        try (MockedConstruction<Random> mock = mockConstruction(Random.class, (mockRandom, context) -> {
+        try (MockedConstruction<Random> ignored = mockConstruction(Random.class, (mockRandom, context) -> {
             when(mockRandom.nextInt(anyInt())).thenReturn(0);  // Immediately simulate valid shortcuts and action
         })) {
             String validActionId = "validAction";
             when(keymap.getActionIds()).thenReturn(new String[]{validActionId});
 
-            Shortcut validShortcutArray[] = {mock(Shortcut.class)};
+            Shortcut[] validShortcutArray = {mock(Shortcut.class)};
             when(keymap.getShortcuts(validActionId)).thenReturn(validShortcutArray);
 
             AnAction validAction = mock(AnAction.class);
@@ -126,7 +125,7 @@ public class RandomShortcutFactoryTest extends TestCase {
 
             Presentation presentation = new Presentation();
             presentation.setText("Valid Action");
-            presentation.setDescription("Valid Description");
+            presentation.setDescription("Valid description");
             when(validAction.getTemplatePresentation()).thenReturn(presentation);
 
             // execute
