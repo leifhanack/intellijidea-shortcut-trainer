@@ -1,9 +1,7 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>strug.intellijidea.shortcuttrainer</id>
 
     <name>Shortcut Trainer</name>
-    <version>1.1</version>
     <vendor>Leif Hanack</vendor>
 
     <description><![CDATA[
@@ -23,7 +21,7 @@
                 <ol>
                     <li><strong>Start Training</strong>: You can start the Shortcut Trainer in two ways:
                         <ul>
-                            <li><strong>Keyboard Shortcut</strong>: Press `Cmd-Shift-K` on macOS or `Ctrl-Shift-K` on Windows/Linux to begin training.</li>
+                            <li><strong>Keyboard Shortcut</strong>: Press `Cmd-Shift-L` on macOS or `Ctrl-Shift-L` on Windows/Linux to begin training.</li>
                             <li><strong>Help Menu</strong>: Alternatively, you can start it from the IntelliJ IDEA "Help" menu. Navigate to **Help** &gt; **Shortcut Trainer**.</li>
                         </ul>
                     </li>
@@ -32,7 +30,7 @@
                 </ol>
 
                 <h2>Preview</h2>
-                <p><img src="https://github.com/leifhanack/intellijidea-shortcut-trainer/blob/main/shortcut-trainer.png" alt="Shortcut Trainer Preview" width="600"/></p>
+                <p><img src="https://github.com/leifhanack/intellijidea-shortcut-trainer/blob/main/shortcut-trainer.png?raw=true" alt="Shortcut Trainer Preview" width="600"/></p>
                 <p>Learn more about the functionality and enjoy the process of mastering your IntelliJ IDEA shortcuts!</p>
 
                 <h2>Installation</h2>
@@ -77,7 +75,7 @@
         <action id="strug.intellijidea.shortcuttrainer.ShortcutTrainer"
                 class="strug.intellijidea.shortcuttrainer.ShortcutTrainer" text="Shortcut Trainer">
             <add-to-group group-id="HelpMenu" anchor="first"/>
-            <keyboard-shortcut first-keystroke="control shift K" keymap="$default"/>
+            <keyboard-shortcut first-keystroke="control shift L" keymap="$default"/>
         </action>
     </actions>
 
