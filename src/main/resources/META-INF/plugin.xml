@@ -21,12 +21,12 @@
                 <ol>
                     <li><strong>Start Training</strong>: You can start the Shortcut Trainer in two ways:
                         <ul>
-                            <li><strong>Keyboard Shortcut</strong>: Press `Cmd-Shift-L` on macOS or `Ctrl-Shift-L` on Windows/Linux to begin training.</li>
-                            <li><strong>Help Menu</strong>: Alternatively, you can start it from the IntelliJ IDEA "Help" menu. Navigate to **Help** &gt; **Shortcut Trainer**.</li>
+                            <li><strong>Keyboard Shortcut</strong>: Press <strong>Cmd-Shift-L</strong> on macOS or <strong>Ctrl-Shift-L</strong> on Windows/Linux to begin training.</li>
+                            <li><strong>Help Menu</strong>: Alternatively, you can start it from the IntelliJ IDEA <strong>Help</strong> menu. Navigate to <strong>Help</strong>Help &gt; <strong>Shortcut Trainer</strong>.</li>
                         </ul>
                     </li>
-                    <li><strong>Reveal Answer</strong>: If you're unsure of the shortcut, you can press the "Show" button or use `Opt-S` (macOS) or `Alt-S` (Windows/Linux).</li>
-                    <li><strong>Next Challenge</strong>: Click "Next" or use `Opt-N` (macOS) or `Alt-N` (Windows/Linux) to move to the next challenge.</li>
+                    <li><strong>Reveal Answer</strong>: If you're unsure of the shortcut, you can press the <strong>Show</strong> button or use <strong>Opt-S</strong> (macOS) or <strong>Alt-S</strong> (Windows/Linux).</li>
+                    <li><strong>Next Challenge</strong>: Click <strong>Next</strong> or use <strong>Opt-N</strong> (macOS) or <strong>Alt-N</strong> (Windows/Linux) to move to the next challenge.</li>
                 </ol>
 
                 <h2>Preview</h2>
@@ -38,7 +38,7 @@
                 <h3>From JetBrains Plugin Marketplace:</h3>
                 <ol>
                     <li>Go to the <a href="https://plugins.jetbrains.com">JetBrains Plugin Marketplace</a>.</li>
-                    <li>Search for "Shortcut Trainer".</li>
+                    <li>Search for <strong>Shortcut Trainer</strong>.</li>
                     <li>Find the plugin in the search results and click on it.</li>
                     <li>Follow the instructions to install it into your IDE.</li>
                 </ol>
@@ -47,7 +47,7 @@
                     <li>Open IntelliJ IDEA and access the <strong>Settings</strong> dialog.</li>
                     <li>Navigate to <strong>Plugins</strong>.</li>
                     <li>Switch to the <strong>Marketplace</strong> tab.</li>
-                    <li>In the search bar, type "Shortcut Trainer" and press Enter.</li>
+                    <li>In the search bar, type <strong>Shortcut Trainer</strong> and press Enter.</li>
                     <li>Find the plugin in the search results and click <strong>Install</strong>.</li>
                 </ol>
 
