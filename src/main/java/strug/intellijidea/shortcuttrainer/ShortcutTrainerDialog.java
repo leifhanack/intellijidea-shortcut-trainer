@@ -78,7 +78,8 @@ public class ShortcutTrainerDialog extends DialogWrapper {
     }
 
     @Override
-    protected Action @NotNull [] createActions() {
+    @NotNull
+    protected Action[] createActions() {
         return new Action[]{
                 new ShowRandomShortcutAction(this),
                 new NextRandomShortcutAction(this)

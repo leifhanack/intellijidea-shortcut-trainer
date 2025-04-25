@@ -11,7 +11,7 @@ Improve your efficiency with IntelliJ IDEA by learning and practicing keyboard s
 ## Usage
 
 1. **Start Training**: You can start the Shortcut Trainer in two ways:
-    - **Keyboard Shortcut**: Press `Cmd-Shift-L` on macOS or `Ctrl-Shift-L` on Windows/Linux to begin training.
+    - **Keyboard Shortcut**: Press `Cmd-Shift-P` on macOS or `Ctrl-Shift-P` on Windows/Linux to begin training.
     - **Help Menu**: Alternatively, you can start it from the IntelliJ IDEA "Help" menu. Navigate to **Help** > **Shortcut Trainer**.
 2. **Reveal Answer**: If you're unsure of the shortcut, you can either press the "Show" button or use the keyboard shortcut `Opt-S` (macOS) or `Alt-S` (Windows/Linux) to reveal the correct answer.
 3. **Next Challenge**: Ready for more? You can either click the "Next" button or use the keyboard shortcut `Opt-N` (macOS) or `Alt-N` (Windows/Linux) to advance to the next shortcut.

@@ -6,20 +6,20 @@ import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.actionSystem.Shortcut;
 import com.intellij.openapi.keymap.Keymap;
 import com.intellij.openapi.keymap.KeymapManager;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Random;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class RandomShortcutFactoryTest {
     @InjectMocks
     private RandomShortcutFactory factory;
@@ -36,7 +36,7 @@ public class RandomShortcutFactoryTest {
 
     private Presentation presentation;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         mockedKeymapManager = Mockito.mockStatic(KeymapManager.class);
         mockedKeymapManager.when(KeymapManager::getInstance).thenReturn(keymapManager);
@@ -50,7 +50,7 @@ public class RandomShortcutFactoryTest {
         presentation.setDescription("Valid description");
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         mockedKeymapManager.close();
         mockedActionManager.close();
@@ -78,7 +78,7 @@ public class RandomShortcutFactoryTest {
             // execute
             RandomShortcut randomShortcut = factory.createRandomShortcut();
 
-            assertNotNull("RandomShortcut should not be null after finding valid shortcuts", randomShortcut);
+            assertNotNull(randomShortcut, "RandomShortcut should not be null after finding valid shortcuts");
             assertNotEquals("Should not have actionId of empty shortcuts", actionIdWithNoShortcut, randomShortcut.actionId);
         }
     }
@@ -104,7 +104,7 @@ public class RandomShortcutFactoryTest {
             // execute
             RandomShortcut randomShortcut = factory.createRandomShortcut();
 
-            assertNotNull("RandomShortcut should not be null after finding valid action", randomShortcut);
+            assertNotNull(randomShortcut, "RandomShortcut should not be null after finding valid action");
             assertNotEquals("Should not have actionId of null action", actionIdWithNullAction, randomShortcut.actionId);
         }
     }
@@ -131,7 +131,7 @@ public class RandomShortcutFactoryTest {
             // execute
             RandomShortcut randomShortcut = factory.createRandomShortcut();
 
-            assertNotNull("RandomShortcut should not be null", randomShortcut);
+            assertNotNull(randomShortcut, "RandomShortcut should not be null");
             assertEquals("Expected the validActionId to be set", validActionId, randomShortcut.actionId);
             assertEquals("Valid Action", randomShortcut.shortcutDescription);
         }

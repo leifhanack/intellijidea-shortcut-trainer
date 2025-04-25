@@ -21,7 +21,7 @@
                 <ol>
                     <li><strong>Start Training</strong>: You can start the Shortcut Trainer in two ways:
                         <ul>
-                            <li><strong>Keyboard Shortcut</strong>: Press <strong>Cmd-Shift-L</strong> on macOS or <strong>Ctrl-Shift-L</strong> on Windows/Linux to begin training.</li>
+                            <li><strong>Keyboard Shortcut</strong>: Press <strong>Cmd-Shift-P</strong> on macOS or <strong>Ctrl-Shift-P</strong> on Windows/Linux to begin training.</li>
                             <li><strong>Help Menu</strong>: Alternatively, you can start it from the IntelliJ IDEA <strong>Help</strong> menu. Navigate to <strong>Help</strong>Help &gt; <strong>Shortcut Trainer</strong>.</li>
                         </ul>
                     </li>
@@ -63,19 +63,11 @@
         </idea-plugin>
     ]]></description>
 
-    <change-notes><![CDATA[
-        <ul>
-            <li>Updated to the Current Plugin API</li>
-            <li>Rewritten README</li>
-            <li>Fixed some bugs</li>
-        </ul>
-    ]]></change-notes>
-
     <actions>
         <action id="strug.intellijidea.shortcuttrainer.ShortcutTrainer"
                 class="strug.intellijidea.shortcuttrainer.ShortcutTrainer" text="Shortcut Trainer">
             <add-to-group group-id="HelpMenu" anchor="first"/>
-            <keyboard-shortcut first-keystroke="control shift L" keymap="$default"/>
+            <keyboard-shortcut first-keystroke="control shift P" keymap="$default"/>
         </action>
     </actions>
 
