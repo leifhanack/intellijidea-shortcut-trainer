@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "strug.intellijidea.shortcuttrainer"
-version = "1.1.1"
+version = "1.1.2"
 
 repositories {
     mavenCentral()
@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        create(IntelliJPlatformType.IntellijIdeaCommunity, "2023.1.5")
+        create(IntelliJPlatformType.IntellijIdeaCommunity, "2025.1")
         bundledPlugin("com.intellij.java")
     }
 
@@ -35,10 +35,7 @@ intellijPlatform {
         version = project.version.toString()
         changeNotes = """
             <ul>
-                <li>Changed default shortcut to <strong>Cmd-Shift-P</strong> on macOS or <strong>Ctrl-Shift-P</strong> on Windows/Linux</li>
-                <li>Set compatibility with all future IDEs by removing <code>untilBuild</code></li>
-                <li>Updated to IntelliJ Platform Gradle Plugin v2</li>
-                <li>Updated to JUnit 5</li>
+                <li>Updated compatibility to IntelliJ Platform 2025.1</li>
             </ul>
         """.trimIndent()
     }
