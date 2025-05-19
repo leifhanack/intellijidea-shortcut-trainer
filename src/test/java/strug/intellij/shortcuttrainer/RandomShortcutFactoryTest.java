@@ -1,4 +1,4 @@
-package strug.intellijidea.shortcuttrainer;
+package strug.intellij.shortcuttrainer;
 
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.AnAction;

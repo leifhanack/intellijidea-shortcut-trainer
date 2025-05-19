@@ -7,8 +7,8 @@
     <description><![CDATA[
         <idea-plugin>
             <description>
-                <h1>Shortcut Trainer for IntelliJ IDEA</h1>
-                <p>Improve your efficiency with IntelliJ IDEA by learning and practicing keyboard shortcuts with the Shortcut Trainer plugin.</p>
+                <h1>Shortcut Trainer for JetBrains IDEs</h1>
+                <p>Improve your efficiency with JetBrains IDEs by learning and practicing keyboard shortcuts with the Shortcut Trainer plugin.</p>
 
                 <h2>Features</h2>
                 <ul>
@@ -22,7 +22,7 @@
                     <li><strong>Start Training</strong>: You can start the Shortcut Trainer in two ways:
                         <ul>
                             <li><strong>Keyboard Shortcut</strong>: Press <strong>Cmd-Shift-P</strong> on macOS or <strong>Ctrl-Shift-P</strong> on Windows/Linux to begin training.</li>
-                            <li><strong>Help Menu</strong>: Alternatively, you can start it from the IntelliJ IDEA <strong>Help</strong> menu. Navigate to <strong>Help</strong>Help &gt; <strong>Shortcut Trainer</strong>.</li>
+                            <li><strong>Help Menu</strong>: Alternatively, you can start it from your JetBrains IDE <strong>Help</strong> menu. Navigate to <strong>Help</strong>Help &gt; <strong>Shortcut Trainer</strong>.</li>
                         </ul>
                     </li>
                     <li><strong>Reveal Answer</strong>: If you're unsure of the shortcut, you can press the <strong>Show</strong> button or use <strong>Opt-S</strong> (macOS) or <strong>Alt-S</strong> (Windows/Linux).</li>
@@ -31,10 +31,10 @@
 
                 <h2>Preview</h2>
                 <p><img src="https://github.com/leifhanack/intellijidea-shortcut-trainer/blob/main/shortcut-trainer.png?raw=true" alt="Shortcut Trainer Preview" width="600"/></p>
-                <p>Learn more about the functionality and enjoy the process of mastering your IntelliJ IDEA shortcuts!</p>
+                <p>Learn more about the functionality and enjoy the process of mastering your JetBrains IDEs shortcuts!</p>
 
                 <h2>Installation</h2>
-                <p>You can easily install the Shortcut Trainer plugin either from the JetBrains Plugin Marketplace online or directly from within IntelliJ IDEA. Follow these steps based on your preference:</p>
+                <p>You can easily install the Shortcut Trainer plugin either from the JetBrains Plugin Marketplace online or directly from within your JetBrains IDE. Follow these steps based on your preference:</p>
                 <h3>From JetBrains Plugin Marketplace:</h3>
                 <ol>
                     <li>Go to the <a href="https://plugins.jetbrains.com">JetBrains Plugin Marketplace</a>.</li>
@@ -42,9 +42,9 @@
                     <li>Find the plugin in the search results and click on it.</li>
                     <li>Follow the instructions to install it into your IDE.</li>
                 </ol>
-                <h3>From IntelliJ IDEA:</h3>
+                <h3>From your JetBrains IDE:</h3>
                 <ol>
-                    <li>Open IntelliJ IDEA and access the <strong>Settings</strong> dialog.</li>
+                    <li>Open your JetBrains IDE and access the <strong>Settings</strong> dialog.</li>
                     <li>Navigate to <strong>Plugins</strong>.</li>
                     <li>Switch to the <strong>Marketplace</strong> tab.</li>
                     <li>In the search bar, type <strong>Shortcut Trainer</strong> and press Enter.</li>
@@ -64,8 +64,8 @@
     ]]></description>
 
     <actions>
-        <action id="strug.intellijidea.shortcuttrainer.ShortcutTrainer"
-                class="strug.intellijidea.shortcuttrainer.ShortcutTrainer" text="Shortcut Trainer">
+        <action id="strug.intellij.shortcuttrainer.ShortcutTrainer"
+                class="strug.intellij.shortcuttrainer.ShortcutTrainer" text="Shortcut Trainer">
             <add-to-group group-id="HelpMenu" anchor="first"/>
             <keyboard-shortcut first-keystroke="control shift P" keymap="$default"/>
         </action>

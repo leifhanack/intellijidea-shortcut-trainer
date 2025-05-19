@@ -7,4 +7,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "intellijidea-shortcut-trainer"
+rootProject.name = "intellij-shortcut-trainer"

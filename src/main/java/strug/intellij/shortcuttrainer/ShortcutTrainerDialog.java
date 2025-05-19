@@ -1,4 +1,4 @@
-package strug.intellijidea.shortcuttrainer;
+package strug.intellij.shortcuttrainer;
 
 import com.intellij.openapi.keymap.KeymapUtil;
 import com.intellij.openapi.project.Project;
@@ -78,8 +78,7 @@ public class ShortcutTrainerDialog extends DialogWrapper {
     }
 
     @Override
-    @NotNull
-    protected Action[] createActions() {
+    protected Action @NotNull [] createActions() {
         return new Action[]{
                 new ShowRandomShortcutAction(this),
                 new NextRandomShortcutAction(this)

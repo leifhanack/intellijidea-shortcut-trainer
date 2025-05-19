@@ -1,4 +1,4 @@
-package strug.intellijidea.shortcuttrainer;
+package strug.intellij.shortcuttrainer;
 
 import com.intellij.openapi.ui.DialogWrapper;
 
@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 
 public class NextRandomShortcutAction extends AbstractAction {
 
-  private ShortcutTrainerDialog dialog;
+  private final ShortcutTrainerDialog dialog;
 
   {
     putValue(DialogWrapper.FOCUSED_ACTION, Boolean.FALSE);

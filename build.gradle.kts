@@ -5,8 +5,8 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.5.0"
 }
 
-group = "strug.intellijidea.shortcuttrainer"
-version = "1.1.2"
+group = "strug.intellij.shortcuttrainer"
+version = "1.1.3"
 
 repositories {
     mavenCentral()
@@ -35,7 +35,7 @@ intellijPlatform {
         version = project.version.toString()
         changeNotes = """
             <ul>
-                <li>Updated compatibility to IntelliJ Platform 2025.1</li>
+                <li>Updated wording from “IntelliJ IDEA” to “JetBrains IDE” for broader compatibility and clarity.</li>
             </ul>
         """.trimIndent()
     }
